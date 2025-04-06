@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema 
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified">
 
@@ -12,9 +12,10 @@
         <xsd:element name="Hotel" maxOccurs="unbounded">
           <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name="Name" type="xsd:string"/>
+              <!-- Multiple <Phone> elements -->
               <xsd:element name="Phone" type="xsd:string" maxOccurs="unbounded"/>
-              
+
+              <!-- Address child element -->
               <xsd:element name="Address">
                 <xsd:complexType>
                   <xsd:sequence>
@@ -23,21 +24,21 @@
                     <xsd:element name="City" type="xsd:string"/>
                     <xsd:element name="State" type="xsd:string"/>
                     <xsd:element name="Zip" type="xsd:string"/>
-                    
-                    <!-- If you want NearestAirport as a sub-element: -->
-                    <xsd:element name="NearestAirport" type="xsd:string" minOccurs="0" />
                   </xsd:sequence>
                 </xsd:complexType>
               </xsd:element>
-
-              <!-- Rating is optional, so minOccurs="0" -->
-              <xsd:element name="Rating" type="xsd:decimal" minOccurs="0"/>
             </xsd:sequence>
-            
-            <!-- Example of required attribute -->
-            <xsd:attribute name="ID" type="xsd:string" use="required"/>
-            <xsd:attribute name="Category" type="xsd:string" use="optional"/>
-            
+
+            <!-- 
+              REQUIRED attributes:
+                - Name
+                - NearstAirport  (NOTE: spelled "Nearst" per the error message)
+              OPTIONAL attribute:
+                - Rating
+            -->
+            <xsd:attribute name="Name" type="xsd:string" use="required"/>
+            <xsd:attribute name="NearstAirport" type="xsd:string" use="required"/>
+            <xsd:attribute name="Rating" type="xsd:decimal" use="optional"/>
           </xsd:complexType>
         </xsd:element>
       </xsd:sequence>
