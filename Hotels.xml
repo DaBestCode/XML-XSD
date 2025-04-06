@@ -3,10 +3,11 @@
         xsi:noNamespaceSchemaLocation="https://dabestcode.github.io/XML-XSD/Hotels.xsd">
 
   <!-- 1 -->
-  <Hotel ID="H1" Category="Luxury">
+  <Hotel Rating="4.2">
     <Name>Westin</Name>
     <Phone>480-968-8885</Phone>
     <Phone>800-937-8461</Phone>
+    <!-- required attribute NearstAirport -->
     <Address NearstAirport="Sky Harbor">
       <Number>11</Number>
       <Street>E 7th St</Street>
@@ -14,26 +15,24 @@
       <State>AZ</State>
       <Zip>85281</Zip>
     </Address>
-    <Rating>4.2</Rating>
   </Hotel>
 
   <!-- 2 -->
-  <Hotel ID="H2">
+  <Hotel>
     <Name>Courtyard</Name>
     <Phone>480-555-1234</Phone>
-    <Address>
+    <Address NearstAirport="Sky Harbor">
       <Number>123</Number>
       <Street>Example Rd</Street>
       <City>Phoenix</City>
       <State>AZ</State>
       <Zip>85004</Zip>
-      <!-- No "NearstAirport" attribute here -->
     </Address>
-    <!-- No Rating element -->
+    <!-- no Rating attribute -->
   </Hotel>
 
   <!-- 3 -->
-  <Hotel ID="H3" Category="Economy">
+  <Hotel Rating="3.8">
     <Name>Desert Oasis</Name>
     <Phone>480-777-2222</Phone>
     <Address NearstAirport="Sky Harbor">
@@ -43,27 +42,25 @@
       <State>AZ</State>
       <Zip>85250</Zip>
     </Address>
-    <Rating>3.8</Rating>
   </Hotel>
 
   <!-- 4 -->
-  <Hotel ID="H4" Category="Business">
+  <Hotel>
     <Name>Grand Hotel</Name>
     <Phone>602-654-9870</Phone>
     <Phone>602-654-9871</Phone>
-    <Address>
+    <Address NearstAirport="Sky Harbor">
       <Number>989</Number>
       <Street>Downtown Ave</Street>
       <City>Phoenix</City>
       <State>AZ</State>
       <Zip>85003</Zip>
-      <!-- No "NearstAirport" -->
     </Address>
-    <!-- No Rating -->
+    <!-- no Rating -->
   </Hotel>
 
   <!-- 5 -->
-  <Hotel ID="H5">
+  <Hotel Rating="4.0">
     <Name>Riverside Inn</Name>
     <Phone>623-900-4567</Phone>
     <Address NearstAirport="Mesa Gateway">
@@ -73,11 +70,10 @@
       <State>AZ</State>
       <Zip>85201</Zip>
     </Address>
-    <Rating>4.0</Rating>
   </Hotel>
 
   <!-- 6 -->
-  <Hotel ID="H6" Category="Budget">
+  <Hotel>
     <Name>Redwood Suites</Name>
     <Phone>928-111-2233</Phone>
     <Address NearstAirport="Flagstaff Pulliam">
@@ -87,11 +83,11 @@
       <State>AZ</State>
       <Zip>86001</Zip>
     </Address>
-    <!-- No Rating -->
+    <!-- no Rating -->
   </Hotel>
 
   <!-- 7 -->
-  <Hotel ID="H7" Category="Resort">
+  <Hotel Rating="4.5">
     <Name>MountainView Lodge</Name>
     <Phone>520-222-3344</Phone>
     <Phone>520-222-3345</Phone>
@@ -102,25 +98,23 @@
       <State>AZ</State>
       <Zip>85705</Zip>
     </Address>
-    <Rating>4.5</Rating>
   </Hotel>
 
   <!-- 8 -->
-  <Hotel ID="H8">
+  <Hotel Rating="3.9">
     <Name>Blue Lagoon</Name>
     <Phone>928-440-2200</Phone>
-    <Address>
+    <Address NearstAirport="Lake Havasu Airport">
       <Number>500</Number>
       <Street>Lakeshore Ave</Street>
       <City>Lake Havasu City</City>
       <State>AZ</State>
       <Zip>86403</Zip>
     </Address>
-    <Rating>3.9</Rating>
   </Hotel>
 
   <!-- 9 -->
-  <Hotel ID="H9" Category="ExtendedStay">
+  <Hotel>
     <Name>City Comfort</Name>
     <Phone>602-555-0199</Phone>
     <Address NearstAirport="Sky Harbor">
@@ -130,22 +124,20 @@
       <State>AZ</State>
       <Zip>85014</Zip>
     </Address>
-    <!-- No Rating -->
+    <!-- no Rating -->
   </Hotel>
 
   <!-- 10 -->
-  <Hotel ID="H10" Category="Boutique">
+  <Hotel Rating="4.7">
     <Name>Sunshine Retreat</Name>
     <Phone>623-120-0000</Phone>
-    <Address>
+    <Address NearstAirport="Glendale Municipal">
       <Number>980</Number>
       <Street>Sunrise Ct</Street>
       <City>Glendale</City>
       <State>AZ</State>
       <Zip>85305</Zip>
-      <!-- No "NearstAirport" -->
     </Address>
-    <Rating>4.7</Rating>
   </Hotel>
 
 </Hotels>
