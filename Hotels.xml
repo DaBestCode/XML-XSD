@@ -1,158 +1,174 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://dabestcode.github.io/XML-XSD/Hotels.xsd">
-
-  <!-- 1 -->
-  <Hotel ID="H1" Category="Luxury">
-    <Name>Westin</Name>
-    <Phone>480-968-8885</Phone>
-    <Phone>800-937-8461</Phone>
-    <Address>
-      <Number>11</Number>
-      <Street>E 7th St</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
-      <NearestAirport>Sky Harbor</NearestAirport>
-    </Address>
-    <Rating>4.2</Rating>
-  </Hotel>
-
-  <!-- 2 -->
-  <Hotel ID="H2">
-    <Name>Courtyard</Name>
-    <Phone>480-555-1234</Phone>
-    <Address>
-      <Number>123</Number>
-      <Street>Example Rd</Street>
-      <City>Phoenix</City>
-      <State>AZ</State>
-      <Zip>85004</Zip>
-      <!-- No NearestAirport -->
-    </Address>
-    <!-- No Rating -->
-  </Hotel>
-
-  <!-- 3 -->
-  <Hotel ID="H3" Category="Economy">
-    <Name>Desert Oasis</Name>
-    <Phone>480-777-2222</Phone>
-    <Address>
-      <Number>45</Number>
-      <Street>Sunset Blvd</Street>
-      <City>Scottsdale</City>
-      <State>AZ</State>
-      <Zip>85250</Zip>
-      <NearestAirport>Sky Harbor</NearestAirport>
-    </Address>
-    <Rating>3.8</Rating>
-  </Hotel>
-
-  <!-- 4 -->
-  <Hotel ID="H4" Category="Business">
-    <Name>Grand Hotel</Name>
-    <Phone>602-654-9870</Phone>
-    <Phone>602-654-9871</Phone>
-    <Address>
-      <Number>989</Number>
-      <Street>Downtown Ave</Street>
-      <City>Phoenix</City>
-      <State>AZ</State>
-      <Zip>85003</Zip>
-      <!-- No NearestAirport -->
-    </Address>
-    <!-- No Rating -->
-  </Hotel>
-
-  <!-- 5 -->
-  <Hotel ID="H5">
-    <Name>Riverside Inn</Name>
-    <Phone>623-900-4567</Phone>
-    <Address>
-      <Number>210</Number>
-      <Street>Riverside Dr</Street>
-      <City>Mesa</City>
-      <State>AZ</State>
-      <Zip>85201</Zip>
-      <NearestAirport>Mesa Gateway</NearestAirport>
-    </Address>
-    <Rating>4.0</Rating>
-  </Hotel>
-
-  <!-- 6 -->
-  <Hotel ID="H6" Category="Budget">
-    <Name>Redwood Suites</Name>
-    <Phone>928-111-2233</Phone>
-    <Address>
-      <Number>808</Number>
-      <Street>Forest Trail</Street>
-      <City>Flagstaff</City>
-      <State>AZ</State>
-      <Zip>86001</Zip>
-      <NearestAirport>Flagstaff Pulliam</NearestAirport>
-    </Address>
-    <!-- No Rating -->
-  </Hotel>
-
-  <!-- 7 -->
-  <Hotel ID="H7" Category="Resort">
-    <Name>MountainView Lodge</Name>
-    <Phone>520-222-3344</Phone>
-    <Phone>520-222-3345</Phone>
-    <Address>
-      <Number>77</Number>
-      <Street>Valley Rd</Street>
-      <City>Tucson</City>
-      <State>AZ</State>
-      <Zip>85705</Zip>
-      <NearestAirport>Tucson International</NearestAirport>
-    </Address>
-    <Rating>4.5</Rating>
-  </Hotel>
-
-  <!-- 8 -->
-  <Hotel ID="H8">
-    <Name>Blue Lagoon</Name>
-    <Phone>928-440-2200</Phone>
-    <Address>
-      <Number>500</Number>
-      <Street>Lakeshore Ave</Street>
-      <City>Lake Havasu City</City>
-      <State>AZ</State>
-      <Zip>86403</Zip>
-      <!-- No NearestAirport -->
-    </Address>
-    <Rating>3.9</Rating>
-  </Hotel>
-
-  <!-- 9 -->
-  <Hotel ID="H9" Category="ExtendedStay">
-    <Name>City Comfort</Name>
-    <Phone>602-555-0199</Phone>
-    <Address>
-      <Number>1501</Number>
-      <Street>Central Blvd</Street>
-      <City>Phoenix</City>
-      <State>AZ</State>
-      <Zip>85014</Zip>
-      <NearestAirport>Sky Harbor</NearestAirport>
-    </Address>
-    <!-- No Rating -->
-  </Hotel>
-
-  <!-- 10 -->
-  <Hotel ID="H10" Category="Boutique">
-    <Name>Sunshine Retreat</Name>
-    <Phone>623-120-0000</Phone>
-    <Address>
-      <Number>980</Number>
-      <Street>Sunrise Ct</Street>
-      <City>Glendale</City>
-      <State>AZ</State>
-      <Zip>85305</Zip>
-      <!-- No NearestAirport -->
-    </Address>
-    <Rating>4.7</Rating>
-  </Hotel>
-
-</Hotels>
+         xsi:noNamespaceSchemaLocation="https://dabestcode.github.io/XML-XSD/Hotels.xsd">
+ 
+   <!-- 1 -->
+   <Hotel ID="H1" Category="Luxury">
+     <Name>Westin</Name>
+   <!-- Hotel 1 -->
+   <Hotel Name="Westin" NearstAirport="Sky Harbor" Rating="4.2">
+     <Phone>480-968-8885</Phone>
+     <Phone>800-937-8461</Phone>
+     <Address>
+ @@ -13,44 +12,35 @@
+       <City>Tempe</City>
+       <State>AZ</State>
+       <Zip>85281</Zip>
+       <NearestAirport>Sky Harbor</NearestAirport>
+     </Address>
+     <Rating>4.2</Rating>
+   </Hotel>
+ 
+   <!-- 2 -->
+   <Hotel ID="H2">
+     <Name>Courtyard</Name>
+   <!-- Hotel 2 -->
+   <Hotel Name="Courtyard" NearstAirport="Sky Harbor">
+     <Phone>480-555-1234</Phone>
+     <Address>
+       <Number>123</Number>
+       <Street>Example Rd</Street>
+       <City>Phoenix</City>
+       <State>AZ</State>
+       <Zip>85004</Zip>
+       <!-- Omitting NearestAirport here (optional) -->
+     </Address>
+     <!-- Omitting Rating here (optional) -->
+   </Hotel>
+ 
+   <!-- 3 -->
+   <Hotel ID="H3" Category="Economy">
+     <Name>Desert Oasis</Name>
+   <!-- Hotel 3 -->
+   <Hotel Name="Desert Oasis" NearstAirport="Sky Harbor" Rating="3.8">
+     <Phone>480-777-2222</Phone>
+     <Address>
+       <Number>45</Number>
+       <Street>Sunset Blvd</Street>
+       <City>Scottsdale</City>
+       <State>AZ</State>
+       <Zip>85250</Zip>
+       <NearestAirport>Sky Harbor</NearestAirport>
+     </Address>
+     <Rating>3.8</Rating>
+   </Hotel>
+ 
+   <!-- 4 -->
+   <Hotel ID="H4" Category="Business">
+     <Name>Grand Hotel</Name>
+   <!-- Hotel 4 -->
+   <Hotel Name="Grand Hotel" NearstAirport="Sky Harbor">
+     <Phone>602-654-9870</Phone>
+     <Phone>602-654-9871</Phone>
+     <Address>
+ @@ -59,44 +49,35 @@
+       <City>Phoenix</City>
+       <State>AZ</State>
+       <Zip>85003</Zip>
+       <!-- No NearestAirport -->
+     </Address>
+     <!-- No Rating -->
+   </Hotel>
+ 
+   <!-- 5 -->
+   <Hotel ID="H5">
+     <Name>Riverside Inn</Name>
+   <!-- Hotel 5 -->
+   <Hotel Name="Riverside Inn" NearstAirport="Mesa Gateway" Rating="4.0">
+     <Phone>623-900-4567</Phone>
+     <Address>
+       <Number>210</Number>
+       <Street>Riverside Dr</Street>
+       <City>Mesa</City>
+       <State>AZ</State>
+       <Zip>85201</Zip>
+       <NearestAirport>Mesa Gateway</NearestAirport>
+     </Address>
+     <Rating>4.0</Rating>
+   </Hotel>
+ 
+   <!-- 6 -->
+   <Hotel ID="H6" Category="Budget">
+     <Name>Redwood Suites</Name>
+   <!-- Hotel 6 -->
+   <Hotel Name="Redwood Suites" NearstAirport="Flagstaff Pulliam">
+     <Phone>928-111-2233</Phone>
+     <Address>
+       <Number>808</Number>
+       <Street>Forest Trail</Street>
+       <City>Flagstaff</City>
+       <State>AZ</State>
+       <Zip>86001</Zip>
+       <NearestAirport>Flagstaff Pulliam</NearestAirport>
+     </Address>
+     <!-- Omitting Rating -->
+   </Hotel>
+ 
+   <!-- 7 -->
+   <Hotel ID="H7" Category="Resort">
+     <Name>MountainView Lodge</Name>
+   <!-- Hotel 7 -->
+   <Hotel Name="MountainView Lodge" NearstAirport="Tucson International" Rating="4.5">
+     <Phone>520-222-3344</Phone>
+     <Phone>520-222-3345</Phone>
+     <Address>
+ @@ -105,54 +86,43 @@
+       <City>Tucson</City>
+       <State>AZ</State>
+       <Zip>85705</Zip>
+       <NearestAirport>Tucson International</NearestAirport>
+     </Address>
+     <Rating>4.5</Rating>
+   </Hotel>
+ 
+   <!-- 8 -->
+   <Hotel ID="H8">
+     <Name>Blue Lagoon</Name>
+   <!-- Hotel 8 -->
+   <Hotel Name="Blue Lagoon" NearstAirport="Lake Havasu Airport" Rating="3.9">
+     <Phone>928-440-2200</Phone>
+     <Address>
+       <Number>500</Number>
+       <Street>Lakeshore Ave</Street>
+       <City>Lake Havasu City</City>
+       <State>AZ</State>
+       <Zip>86403</Zip>
+       <!-- No NearestAirport -->
+     </Address>
+     <Rating>3.9</Rating>
+   </Hotel>
+ 
+   <!-- 9 -->
+   <Hotel ID="H9" Category="ExtendedStay">
+     <Name>City Comfort</Name>
+   <!-- Hotel 9 -->
+   <Hotel Name="City Comfort" NearstAirport="Sky Harbor">
+     <Phone>602-555-0199</Phone>
+     <Address>
+       <Number>1501</Number>
+       <Street>Central Blvd</Street>
+       <City>Phoenix</City>
+       <State>AZ</State>
+       <Zip>85014</Zip>
+       <NearestAirport>Sky Harbor</NearestAirport>
+     </Address>
+     <!-- No Rating -->
+   </Hotel>
+ 
+   <!-- 10 -->
+   <Hotel ID="H10" Category="Boutique">
+     <Name>Sunshine Retreat</Name>
+   <!-- Hotel 10 -->
+   <Hotel Name="Sunshine Retreat" NearstAirport="Glendale Municipal" Rating="4.7">
+     <Phone>623-120-0000</Phone>
+     <Address>
+       <Number>980</Number>
+       <Street>Sunrise Ct</Street>
+       <City>Glendale</City>
+       <State>AZ</State>
+       <Zip>85305</Zip>
+       <!-- No NearestAirport -->
+     </Address>
+     <Rating>4.7</Rating>
+   </Hotel>
+ 
+ </Hotels>
