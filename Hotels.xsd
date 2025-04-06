@@ -1,46 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema 
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified">
 
-  <!-- Root element: Hotels -->
   <xsd:element name="Hotels">
     <xsd:complexType>
       <xsd:sequence>
-        <!-- Multiple Hotel elements allowed -->
         <xsd:element name="Hotel" maxOccurs="unbounded">
           <xsd:complexType>
             <xsd:sequence>
-              <!-- 1) Name (exactly 1) -->
-              <xsd:element name="Name" type="xsd:string" />
-
-              <!-- 2) Phone can appear multiple times -->
-              <xsd:element name="Phone" type="xsd:string" maxOccurs="unbounded" />
-
-              <!-- 3) Address sub-element -->
+              <!-- 1) Name element -->
+              <xsd:element name="Name" type="xsd:string"/>
+              <!-- 2) multiple Phone elements -->
+              <xsd:element name="Phone" type="xsd:string" maxOccurs="unbounded"/>
+              
+              <!-- 3) Address element with required attribute NearstAirport -->
               <xsd:element name="Address">
                 <xsd:complexType>
                   <xsd:sequence>
-                    <xsd:element name="Number" type="xsd:string" />
-                    <xsd:element name="Street" type="xsd:string" />
-                    <xsd:element name="City" type="xsd:string" />
-                    <xsd:element name="State" type="xsd:string" />
-                    <xsd:element name="Zip" type="xsd:string" />
+                    <xsd:element name="Number" type="xsd:string"/>
+                    <xsd:element name="Street" type="xsd:string"/>
+                    <xsd:element name="City" type="xsd:string"/>
+                    <xsd:element name="State" type="xsd:string"/>
+                    <xsd:element name="Zip" type="xsd:string"/>
                   </xsd:sequence>
-                  <!-- Optional attribute: NearstAirport -->
-                  <xsd:attribute name="NearstAirport" type="xsd:string" use="optional"/>
+                  <!-- 
+                    Figure 1 labels NearstAirport as a required attribute on Address,
+                    so every <Address> must have NearstAirport="someAirport".
+                  -->
+                  <xsd:attribute name="NearstAirport" type="xsd:string" use="required"/>
                 </xsd:complexType>
               </xsd:element>
-
-              <!-- 4) Optional Rating element -->
-              <xsd:element name="Rating" type="xsd:decimal" minOccurs="0"/>
             </xsd:sequence>
 
-            <!-- Required attribute on <Hotel> -->
-            <xsd:attribute name="ID" type="xsd:string" use="required"/>
-            <!-- Optional attribute on <Hotel> -->
-            <xsd:attribute name="Category" type="xsd:string" use="optional"/>
+            <!-- 
+              Figure 1 labels "Rating" as an optional attribute on Hotel (dotted arrow).
+              If you omit it, no error. If you provide it, must be decimal.
+            -->
+            <xsd:attribute name="Rating" type="xsd:decimal" use="optional"/>
           </xsd:complexType>
         </xsd:element>
       </xsd:sequence>
