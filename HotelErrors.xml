@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Root is "Hotel" instead of "Hotels" -->
 <Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="https://github.com/DaBestCode/XML-XSD.xsd">
+       xsi:noNamespaceSchemaLocation="https://dabestcode.github.io/XML-XSD/Hotels.xsd">
 
   <Hotel ID="H1" Category="Luxury">
     <!-- Provide two <Name> tags -->
