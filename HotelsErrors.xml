@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Root is "Hotel" instead of "Hotels" -->
+<!-- (1) Root element is "Hotel" instead of "Hotels" -->
 <Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://dabestcode.github.io/XML-XSD/Hotels.xsd">
 
-  <!-- 2) Missing required NearstAirport attribute -->
-  <Hotel Name="FaultyHotel" Rating="3.0">
-    <!-- 3) Mismatched closing tag: <Address> opened but closing </Addresx> (typo) -->
-    <Phone>123-456-7890</Phone>
-    <Address>
-      <Number>99</Number>
-      <Street>Error St</Street>
-      <City>Nowhere</City>
+  <!-- Hotel 1 with multiple errors -->
+  <Hotel ID="H1" Category="Luxury">
+    <!-- (5) Two Name elements -->
+    <Name>Westin</Name>
+    <Name>AnotherName</Name>
+    <!-- Missing <Phone> entirely (3) -->
+    <!-- (4) <Address> has no closing tag -->
+    <Address NearstAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
       <State>AZ</State>
-      <Zip>99999</Zip>
-    </Addresx>
+      <Zip>85281</Zip>
+    <!-- No closing </Address> -->
+    <Rating>4.2</Rating>
   </Hotel>
 
-  <!-- 4) Missing required Name attribute -->
-  <Hotel NearstAirport="Sky Harbor" Rating="4.2">
-    <!-- 5) Maybe no <Address> at all (invalid structure),
-           or we can add an invalid child <Names> instead of <Phone> to break it. -->
-    <Names>ShouldBePhone</Names>
+  <!-- Hotel 2 missing required attribute ID (2) -->
+  <Hotel Category="Budget">
+    <Name>Courtyard</Name>
+    <Phone>480-555-1234</Phone>
+    <Address>
+      <Number>123</Number>
+      <Street>Example Rd</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    </Address>
   </Hotel>
 
 </Hotel>
