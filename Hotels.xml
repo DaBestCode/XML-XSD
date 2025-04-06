@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://github.com/DaBestCode/XML-XSD/Hotels.xsd">
+        xsi:noNamespaceSchemaLocation="https://dabestcode.github.io/XML-XSD/Hotels.xsd">
 
   <!-- 1 -->
   <Hotel ID="H1" Category="Luxury">
